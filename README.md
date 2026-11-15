@@ -15,6 +15,26 @@ Anthropic's plugin directory does not accept themes for now, so Solarized is not
 does not appear in the app's plugin browser on its own. You install it from this repository, which
 acts as its own marketplace.
 
+### Ask Claude to install it
+
+Paste this into a session in the desktop app's **Code** tab, or into Claude Code in a terminal:
+
+```
+Install the Solarized theme for Claude from the GitHub repository
+spacefarm-digital/claude-solarized. Run these two shell commands in order and
+show me what each one prints:
+
+claude plugin marketplace add spacefarm-digital/claude-solarized
+claude plugin install solarized@claude-solarized
+
+Install it at the user scope. When both succeed, tell me to start a new session
+to see the theme. If the claude command is not found or a command fails, stop
+and show me the error. Do not try another way to install it.
+```
+
+Depending on your permission mode, Claude asks before it runs each command. Then start a new
+session to see the theme.
+
 ### Desktop app
 
 The desktop app and the `claude` command-line tool read the same settings, so two commands in a
