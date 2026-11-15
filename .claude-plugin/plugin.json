@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "description": "Solarized Light and Solarized Dark for Claude, from Ethan Schoonover's 16-colour palette. Follows the app's light or dark mode.",
   "author": { "name": "spacefarm-digital" },
+  "license": "MIT",
   "homepage": "https://github.com/spacefarm-digital/claude-solarized"
 }
