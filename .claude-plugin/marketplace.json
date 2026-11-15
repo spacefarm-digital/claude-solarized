@@ -1,0 +1,6 @@
+{
+  "name": "claude-solarized",
+  "description": "Solarized Light and Solarized Dark for the Claude desktop and mobile apps.",
+  "owner": { "name": "spacefarm-digital" },
+  "plugins": [{ "name": "solarized", "source": "./" }]
+}
