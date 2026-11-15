@@ -1,5 +1,7 @@
 # Solarized for Claude
 
+![Solarized for Claude: the light theme on the left and the dark theme on the right](assets/launch-x.png)
+
 Solarized Light and Solarized Dark for the Claude desktop and mobile apps, built from
 [Ethan Schoonover's Solarized palette](https://ethanschoonover.com/solarized/). One mod carries
 both themes. It follows the app's light or dark mode, so there is nothing to switch.
@@ -9,14 +11,23 @@ app's own look.
 
 ## Install
 
-At the prompt of a terminal session:
+Solarized is not listed in Anthropic's plugin directory, so it does not appear in the app's plugin
+browser on its own. You install it from this repository, which acts as its own marketplace.
 
-```
-/plugin install solarized --marketplace spacefarm-digital/claude-solarized
-```
+### Desktop app
 
-Answer `y` to add the marketplace, then choose a scope. The user scope applies the theme to every
-session.
+1. Open the **Code** tab and open a local session.
+2. Click **+** next to the prompt box and select **Add plugins**. If the menu shows **Plugins**
+   instead, select **Plugins**, then **Browse plugins**.
+3. Choose **Add marketplace** and enter `spacefarm-digital/claude-solarized`.
+4. Select **solarized** and install it. When the app asks for a scope, choose your user account, so
+   the theme applies to every session.
+5. Start a new session. The colours follow the app's light or dark mode.
+
+If your version of the app has no **Add marketplace** option, run the terminal command below. The
+desktop app and the terminal read the same settings, so the theme then loads in the app too.
+
+### Terminal
 
 From a shell:
 
@@ -24,8 +35,29 @@ From a shell:
 claude plugin install solarized --marketplace spacefarm-digital/claude-solarized
 ```
 
-In the desktop app, where `/plugin` does not run: click **+** next to the prompt box, then
-**Plugins**, **Add marketplace** with `spacefarm-digital/claude-solarized`, then **Add plugin**.
+This adds the repository as a marketplace and installs the theme at the user scope. Start a new
+session in the desktop app to see it.
+
+Inside a terminal session, the same thing as a slash command:
+
+```
+/plugin install solarized --marketplace spacefarm-digital/claude-solarized
+```
+
+Answer `y` to add the marketplace, then choose a scope.
+
+### Turn it off or remove it
+
+In the desktop app, click **+** next to the prompt box and select **Manage plugins**. From a shell:
+
+```
+claude plugin uninstall solarized
+```
+
+### Requirements
+
+The desktop app needs Claude Code 2.1.286 or later for mods. Theming is newer than that; this theme
+was built with 2.1.325. If the colours do not change, update the app.
 
 ## Palette
 
