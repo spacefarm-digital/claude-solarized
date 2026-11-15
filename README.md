@@ -11,8 +11,9 @@ app's own look.
 
 ## Install
 
-Solarized is not listed in Anthropic's plugin directory, so it does not appear in the app's plugin
-browser on its own. You install it from this repository, which acts as its own marketplace.
+Anthropic's plugin directory does not accept themes for now, so Solarized is not listed there and
+does not appear in the app's plugin browser on its own. You install it from this repository, which
+acts as its own marketplace.
 
 ### Desktop app
 
