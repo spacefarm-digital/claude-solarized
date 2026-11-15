@@ -17,42 +17,47 @@ acts as its own marketplace.
 
 ### Desktop app
 
-1. Open the **Code** tab and open a local session.
-2. Click **+** next to the prompt box and select **Add plugins**. If the menu shows **Plugins**
-   instead, select **Plugins**, then **Browse plugins**.
-3. Choose **Add marketplace** and enter `spacefarm-digital/claude-solarized`.
-4. Select **solarized** and install it. When the app asks for a scope, choose your user account, so
-   the theme applies to every session.
-5. Start a new session. The colours follow the app's light or dark mode.
+The desktop app and the `claude` command-line tool read the same settings, so two commands in a
+terminal install the theme for the app.
 
-If your version of the app has no **Add marketplace** option, run the terminal command below. The
-desktop app and the terminal read the same settings, so the theme then loads in the app too.
+1. Open a terminal and add this repository as a marketplace:
 
-### Terminal
+   ```
+   claude plugin marketplace add spacefarm-digital/claude-solarized
+   ```
 
-From a shell:
+2. Install the theme. It goes in at the user scope, so it applies to every project:
+
+   ```
+   claude plugin install solarized@claude-solarized
+   ```
+
+3. In the desktop app, open the **Code** tab and start a new session. The colours follow the app's
+   light or dark mode.
+
+Without the command-line tool, add the marketplace in the app: click **+** next to the prompt box
+and select **Add plugins** (or **Plugins**, then **Browse plugins**), choose **Add marketplace**,
+enter `spacefarm-digital/claude-solarized`, then install **solarized** for your user account. Where
+these controls sit can differ between versions of the app.
+
+### Inside a terminal session
 
 ```
-claude plugin install solarized --marketplace spacefarm-digital/claude-solarized
+/plugin marketplace add spacefarm-digital/claude-solarized
 ```
 
-This adds the repository as a marketplace and installs the theme at the user scope. Start a new
-session in the desktop app to see it.
-
-Inside a terminal session, the same thing as a slash command:
-
 ```
-/plugin install solarized --marketplace spacefarm-digital/claude-solarized
+/plugin install solarized@claude-solarized
 ```
 
-Answer `y` to add the marketplace, then choose a scope.
+The terminal itself keeps its own colours. The theme draws in the desktop and mobile apps.
 
 ### Turn it off or remove it
 
 In the desktop app, click **+** next to the prompt box and select **Manage plugins**. From a shell:
 
 ```
-claude plugin uninstall solarized
+claude plugin uninstall solarized@claude-solarized
 ```
 
 ### Requirements
